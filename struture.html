@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="struture.css">
+</head>
+<body>
+  <button onclick="life.doStep();this.innerHTML='Step ('+life.util.step+')';">Step</button>
+<button onclick="if(life.util.paused){this.innerHTML='Pause';life.start();}else{ this.innerHTML = 'Start';life.pause();}">Start</button>
+<button onclick="life.reset();">Reset</button>
+<button onclick="canvasView.zoomIn();">Zoom in</button>
+<button onclick="canvasView.zoomOut();">Zoom out</button>
+<div class="fullscreen">
+    <canvas id="grid"></canvas>
+</div>
+<div id="util" style="display:none;"> <span id="cell" class="cell">
+        <span id="cellAlive" class="cellAlive"></span>
+ <span id="cellDead" class="cellDead"></span>
+</span>
+</div>
+<script src="struture.js"></script>
+</body>
+</html>
